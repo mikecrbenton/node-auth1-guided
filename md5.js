@@ -1,6 +1,8 @@
 const crypto = require("crypto")
 
-const rounds = 1 // how many times we hash the hash
+// WE WANT TO SLOW DOWN TO ABOUT 1-2 SECONDS TO
+// AVOID RAINBOW TABLES
+const rounds = 1000000 // how many times we hash the hash
 const value = "hello world"
 
 console.time("hash time")
